@@ -5,18 +5,14 @@ import os
 
 working_dir = os.path.dirname(__file__)
 
-
 heart_disease_model = pickle.load(open(os.path.join(working_dir,'heart_trained_model.sav'),'rb'))
 preprocessor = pickle.load(open(os.path.join(working_dir,'preprocessor.pkl'), 'rb'))
 
-
-diabetes_model = pickle.load(open(os.path.join(working_dir, 'diabetes_trained_model.sav'), 'rb'))
+diabetes_model = pickle.load(open(os.path.join(working_dir, 'diabetes_model.sav'), 'rb'))
 scaler = pickle.load(open(os.path.join(working_dir, 'diabetes_scaler.sav'), 'rb'))
 
 stroke_prediction_model = pickle.load(open(os.path.join(working_dir, 'stroke_trained_model.sav'), 'rb'))
 preprocessor_stroke = pickle.load(open(os.path.join(working_dir,'preprocessor_stroke.pkl'),'rb'))
-
-
 
 
 def heart_pred_func():
