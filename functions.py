@@ -1,19 +1,20 @@
 import pickle
 import streamlit as st
 import pandas as pd
+import os
+
+working_dir = os.path.dirname(__file__)
 
 
+heart_disease_model = pickle.load(open(os.path.join(working_dir,'heart_trained_model.sav'),'rb'))
+preprocessor = pickle.load(open(os.path.join(working_dir,'preprocessor.pkl'), 'rb'))
 
 
-heart_disease_model = pickle.load(open("D:\Multiple Disease Prediction System\heart_trained_model.sav","rb"))
-preprocessor = pickle.load(open('D:\Multiple Disease Prediction System\preprocessor.pkl', 'rb'))
+diabetes_model = pickle.load(open(os.path.join(working_dir, 'diabetes_trained_model.sav'), 'rb'))
+scaler = pickle.load(open(os.path.join(working_dir, 'diabetes_scaler.sav'), 'rb'))
 
-
-diabetes_model = pickle.load(open("D:\Multiple Disease Prediction System\diabetes_model.sav","rb"))
-scaler = pickle.load(open('D:\Multiple Disease Prediction System\diabetes_scaler.sav', 'rb'))
-
-stroke_prediction_model = pickle.load(open("D:\Multiple Disease Prediction System\stroke_trained_model.sav","rb"))
-preprocessor_stroke = pickle.load(open("D:\Multiple Disease Prediction System\preprocessor_stroke.pkl","rb"))
+stroke_prediction_model = pickle.load(open(os.path.join(working_dir, 'stroke_trained_model.sav'), 'rb'))
+preprocessor_stroke = pickle.load(open(os.path.join(working_dir,'preprocessor_stroke.pkl'),'rb'))
 
 
 
