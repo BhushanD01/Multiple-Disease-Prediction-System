@@ -16,10 +16,9 @@
 
 ```text
 .
-├── models/
-│   ├── diabetes_model.sav           # Optimized RF Model for Diabetes Prediction
-│   ├── stroke_trained_model.sav     # Optimized RF Model for Stroke Risk Prediction
-│   └── heart_trained_model.sav      # LR Model for Heart Disease Prediction
+├── diabetes_model.sav           # Optimized RF Model for Diabetes Prediction
+├── stroke_trained_model.sav     # Optimized RF Model for Stroke Risk Prediction
+├── heart_trained_model.sav      # LR Model for Heart Disease Prediction
 ├── multiple_disease_pred.py         # Main Streamlit Application
 ├── functions.py                     # Web App Functions
 └── requirements.txt                 # Dependencies for deployment
